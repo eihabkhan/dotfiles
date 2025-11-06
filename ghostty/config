@@ -7,7 +7,7 @@
 
 theme = dark:Vesper,light:Rose Pine Dawn
 font-family = JetBrainsMono Nerd Font
-font-size = 16
+font-size = 14
 background-blur = 40
 mouse-hide-while-typing = true
 macos-option-as-alt = true
@@ -15,3 +15,8 @@ background-opacity = 0.8
 window-height = 100
 window-width = 200
 window-colorspace = display-p3
+macos-titlebar-style = hidden
+window-decoration = server
+macos-non-native-fullscreen = true
+unfocused-split-opacity = 1.0
+cursor-color = #FD6401
