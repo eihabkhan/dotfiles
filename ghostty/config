@@ -6,7 +6,7 @@
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
 theme = dark:Vesper,light:Rose Pine Dawn
-font-family = JetBrains Mono
+font-family = JetBrainsMono Nerd Font
 font-size = 16
 background-blur = 40
 mouse-hide-while-typing = true
