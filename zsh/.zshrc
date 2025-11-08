@@ -28,6 +28,12 @@ alias o="ollama"
 alias ods="ollama run deepseek-r1:7b"
 
 # -------------------------------- #
+# Shell
+# -------------------------------- #
+alias zz="zellij"
+alias ls="eza --long --icons --header --group --git --hyperlink"
+
+# -------------------------------- #
 # Git
 # -------------------------------- #
 
