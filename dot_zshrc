@@ -1,5 +1,11 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
+# fnm
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd --shell zsh)"
+fi
 
 # P10K
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -21,11 +27,18 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias c="code"
+alias cc="claude"
 
 alias p="pnpm"
 
 alias o="ollama"
 alias ods="ollama run deepseek-r1:7b"
+
+# -------------------------------- #
+# Shell
+# -------------------------------- #
+alias zz="zellij"
+alias ls="eza --long --icons --header --group --git --hyperlink"
 
 # -------------------------------- #
 # Git
@@ -64,14 +77,10 @@ alias pull="git pull"
 alias fetch="git fetch"
 alias merge="git merge"
 alias rebase="git rebase"
+alias checkout="git checkout"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# fnm
-if command -v fnm >/dev/null 2>&1; then
-  eval "$(fnm env --use-on-cd --shell zsh)"
-fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -80,9 +89,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
 
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -97,3 +103,13 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Added by Antigravity
+export PATH="/Users/eihab/.antigravity/antigravity/bin:$PATH"
+
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/Developer/dotfiles/p10k/.p10k.zsh.
+[[ ! -f ~/Developer/dotfiles/p10k/.p10k.zsh ]] || source ~/Developer/dotfiles/p10k/.p10k.zsh
