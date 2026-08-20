@@ -39,6 +39,8 @@ alias ods="ollama run deepseek-r1:7b"
 # -------------------------------- #
 alias zz="zellij"
 alias ls="eza --long --icons --header --group --git --hyperlink"
+alias zm="chezmoi"
+alias zmzsh="chezmoi edit --apply ~/.zshrc"
 
 # -------------------------------- #
 # Git
