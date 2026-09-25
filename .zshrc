@@ -34,6 +34,8 @@ alias p="pnpm"
 alias o="ollama"
 alias ods="ollama run deepseek-r1:7b"
 
+alias ecp="egg connect php"
+
 # -------------------------------- #
 # Shell
 # -------------------------------- #
